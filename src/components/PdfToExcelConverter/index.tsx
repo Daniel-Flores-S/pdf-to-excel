@@ -7,10 +7,7 @@ const PdfToExcelConverter: React.FC = () => {
 
   const handleFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
-
     if (!file) return
-
-
     const response = await ConvertPdfToExcel(file)
 
     console.log(response)
